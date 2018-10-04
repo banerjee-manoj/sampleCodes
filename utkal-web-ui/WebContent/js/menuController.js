@@ -17,3 +17,9 @@ function loadAllCustomerPage(){
 	$("#mainContainer").load("./pages/customer/showAllCustomer.html");
 	getAllCustomer();
 }
+
+
+function loadOrderManagementpage(){
+	getAllCustomerNames();
+	$("#mainContainer").load("./pages/order/manageOrder.html");
+}

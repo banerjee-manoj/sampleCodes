@@ -1,0 +1,96 @@
+<div style="text-align: center"><h4>Manage Order</h4></div>
+<hr>
+<div class="row">
+<div class="col-sm-3">
+<div class="control-group">
+<label class="control-label input-label" style="font-size: 16px"><strong>Select Customer:</strong></label>
+<div class="control">
+<input type="text" id="customerNameSearch" class="form-control form-control-sm" 
+  name="myCountry" placeholder="Select Customer">
+</div>
+<button class=" btn btn-primary btn-sm" onclick="getCustomerByName()" style="margin-top: 8px">Get Details</button>
+<button type="reset" class=" btn  btn-sm" style="margin-top: 8px">Reset</button>
+</div>
+<hr>
+<div class="control-group">
+<label class="control-label input-label" style="font-size: 16px"><strong>Select Order Date:</strong></label>
+<div class="control">
+<input type="date" id="orderDate" class="form-control form-control-sm" 
+  name="orderDate" >
+</div>
+<button class=" btn btn-primary btn-sm" onclick="createOrderPage()" style="margin-top: 8px">Submit</button>
+<button type="reset" class=" btn  btn-sm" style="margin-top: 8px">Reset</button>
+</div>
+<hr>
+
+
+
+<div style="background: #aaaa">
+<div class="control-group">
+<label class="control-label input-label" >Mobile Number:</label>
+<span class="control">9874</span>
+</div>
+<div class="control-group">
+<label class="control-label input-label" >Address:</label>
+<div><span class="control">9874</span></div>
+</div>
+<div class="control-group">
+<label class="control-label input-label" >Normal Jar pending:</label>
+<span class="control">6</span>
+</div>
+<div class="control-group">
+<label class="control-label input-label" >Cold Jar pending:</label>
+<span class="control">6</span>
+</div>
+<div class="control-group">
+<label class="control-label input-label" >Container:</label>
+<span class="control">6</span>
+</div>
+<div class="control-group">
+<label class="control-label input-label" >Payment due:</label>
+<span class="control">6</span>
+</div>
+</div>
+<hr>
+
+</div>
+
+
+
+
+<div class="col-sm-9" style="padding-left:0px; ">
+ <div class="form-horizontal" >
+ New Order:
+ <hr>
+ <div class="form-group row">
+      <label class="col-sm-3" style="text-align: right" for="customerName">Normal Jar:</label>
+      <div class="col-sm-3 item-align"  >
+      <input type="number" class="form-control" id="normalJarOrder" >
+      </div>
+      <label class="col-sm-2 label-align" for="mobileNumber">Cold jar:</label>
+      <div class="col-sm-3 item-align" >
+      <input type="number" class="form-control" id="coldJarOrder" >
+      </div>
+</div>
+ Return:
+ <hr>
+ <div class="form-group row">
+      <label class="col-sm-3" style="text-align: right" for="customerName">Normal Jar:</label>
+      <div class="col-sm-3 item-align"  >
+      <input type="number" class="form-control" id="normalJarReturned" >
+      </div>
+      <label class="col-sm-2 label-align" for="mobileNumber">Cold jar:</label>
+      <div class="col-sm-3 item-align" >
+      <input type="number" class="form-control" id="coldJarReturned" >
+      </div>
+</div>
+ </div>
+
+
+
+</div>
+
+
+
+</div>
+  
