@@ -65,13 +65,16 @@ input[type=submit] {
 <hr>
 <div class="row">
 <div class="col-sm-3">
+ 
 <div class="control-group">
 <label class="control-label input-label" style="font-size: 16px"><strong>Select Customer:</strong></label>
 <div class="control">
 <input type="text" id="customerNameSearch" class="form-control form-control-sm" 
   name="myCountry" placeholder="Select Customer">
+ 
 </div>
-<button class=" btn btn-primary btn-sm" onclick="getCustomerByName()" style="margin-top: 8px">Get Details</button>
+ <input type="hidden" id="customerIdHidden" value=0>
+<button class=" btn btn-primary btn-sm" onclick="getCustomerById()" style="margin-top: 8px">Get Details</button>
 <button type="reset" class=" btn  btn-sm" style="margin-top: 8px">Reset</button>
 </div>
 <hr>
@@ -85,8 +88,8 @@ input[type=submit] {
 
 <div class="col-sm-9" style="padding-left:0px; ">
 <div>
-
-<div class="form-horizontal"  id="customerSearchResultDiv" >
+<div class="col-sm-12" id="successDiv" style="padding-left:0px; display: none"></div>
+<div class="form-horizontal"  id="customerSearchResultDiv" style="display: none" >
    
 <div class="form-group row">
       <label class="col-sm-3" style="text-align: right" for="customerName">Customer Name:</label>
@@ -145,8 +148,8 @@ input[type=submit] {
 </div>
  <div class="form-group">        
       <div class="col-sm-12" style="text-align: center">
-      <button  onclick="enableEdit()"  class="btn btn-primary">Edit</button>
-        <button  onclick="validateCustomerForm()"  class="btn btn-primary">Submit</button>
+      <button  onclick="enableCustomerEdit()" id="editCustomerBtn" class="btn btn-primary">Edit</button>
+        <button  onclick="validateCustomerForm()" id="createCustomerBtn" class="btn btn-primary">Submit</button>
 		 <button onclick="resetField()" class="btn btn-default">Cancel</button>
       </div>
     </div> 

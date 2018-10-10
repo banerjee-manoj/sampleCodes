@@ -23,3 +23,18 @@ function loadOrderManagementpage(){
 	getAllCustomerNames();
 	$("#mainContainer").load("./pages/order/manageOrder.html");
 }
+
+function loadManagePayment(){
+	getAllCustomerNames();
+	$("#mainContainer").load("./pages/payment/payment.html");
+	
+}
+
+function loadJarDefaulterPage(){
+	$("#mainContainer").load("./pages/defaulters/jarDefaulters.html");
+}
+
+function loadOrderHistory(){
+	getAllCustomerNames();
+	$("#mainContainer").load("./pages/order/orderHistory.html");
+}

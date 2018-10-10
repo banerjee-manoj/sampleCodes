@@ -15,11 +15,13 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
-
+<script src="js/global.js"></script>
 <script src="js/menuController.js"></script>
 <script src="js/customerController.js"></script>
 <script src="js/autoComplete.js"></script>
 <script src="js/orderManagementController.js"></script>
+<script src="js/paymentController.js"></script>
+<script src="js/defaulterController.js"></script>
 
  
   
@@ -28,7 +30,34 @@
 webshims.setOptions('forms-ext', {types: 'date'});
 webshims.polyfill('forms forms-ext');
 </script>
+
+
+
+  
+
+
+
   <style type="text/css">
+  #loading-img {
+    background: url(http://preloaders.net/preloaders/360/Velocity.gif) center center no-repeat;
+    height: 100%;
+    z-index: 20;
+}
+.overlay {
+    background: #e9e9e9;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 20;
+}
+  
+  
+  
+  
   .mainContainerClass{
   margin-left: 10px;
   margin-right: 10px}
@@ -36,7 +65,11 @@ webshims.polyfill('forms forms-ext');
   </style>
   </head>
 <body>
+<div class="overlay">
 
+    <div id="loading-img"></div>
+
+</div>
 <div class="jumbotron text-center" style="margin-bottom:0;padding: 1rem 1rem">
   <h4>Test Page</h4>
    
@@ -66,10 +99,35 @@ webshims.polyfill('forms forms-ext');
    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" >Order Management</a>
    <div class="dropdown-menu">
    <a class="dropdown-item" href="#" onClick="loadOrderManagementpage()">Manage Order</a>
+   <a class="dropdown-item" href="#" onClick="loadOrderHistory()">Order History</a>
+   <!-- <a class="dropdown-item" href="#" onClick="loadManagePayment()">Manage Payment</a> -->
    </div>
    </li>
       <!-- Order Management Links -->
+      
+       <!-- Payment Management Links -->
+    <li class="nav-item dropdown">
+   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" >Payment Management</a>
+   <div class="dropdown-menu">
+   <a class="dropdown-item" href="#" onClick="loadManagePayment()">Manage Payment</a>
+    <a class="dropdown-item" href="#" onClick="loadPaymentHistory()">Payment History</a>
+  
+   </div>
+   </li>
+      <!-- Payment Links -->
           
+      
+       <!-- Defaulter Management Links -->
+    <li class="nav-item dropdown">
+   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" >Defaulters</a>
+   <div class="dropdown-menu">
+   <a class="dropdown-item" href="#" onClick="loadJarDefaulterPage()">Jar Defaulters</a>
+   <a class="dropdown-item" href="#" onClick="()">Payment Defaulters</a>
+   </div>
+   </li>
+      <!-- Defaulters Links -->
+      
+       
     </ul>
   </div>  
 </nav>
